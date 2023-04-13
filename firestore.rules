@@ -1,0 +1,10 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /chats/{chatID} {
+      allow write: if get(databases/(database)/documents/chats/$(chatID)) == null
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

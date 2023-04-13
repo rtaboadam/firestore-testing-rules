@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "mocha tests/firestore.rules.test.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +34,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@firebase/testing": "^0.20.11",
+    "chai": "^4.3.7",
+    "firebase": "^9.19.1",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.3"
   }
 }
